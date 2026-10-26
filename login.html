@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>o!Share - Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Inter:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // configura fuente predeterminada tw
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['"Baloo 2"', 'cursive'] } } }
+    }
+  </script>
+</head>
+
+<body class="min-h-screen flex flex-col bg-[#dadfe2] font-sans">
+  <header class="bg-[#004a73] h-14 lg:h-[77px] flex items-center justify-between pl-2 lg:pl-[7px] font-['Inter']">
+    <div class="flex items-center gap-3 lg:gap-[26px]">
+      <a href="index.html" aria-label="o!Share"
+        class="shrink-0 size-11 lg:size-[68px] rounded-xl bg-white flex items-center justify-center">
+        <span
+          class="size-9 lg:size-[52px] rounded-full border-2 border-[#1a8cff] text-[#1a8cff] font-bold text-[11px] lg:text-base flex items-center justify-center gap-0.5">o!
+          <svg viewBox="0 0 16 16" class="size-2.5 lg:size-4" fill="none" stroke="currentColor" stroke-width="1.2">
+            <circle cx="12" cy="3.5" r="1.8" />
+            <circle cx="4" cy="8" r="1.8" />
+            <circle cx="12" cy="12.5" r="1.8" />
+            <path d="M5.7 7l4.6-2.6M5.7 9l4.6 2.6" />
+          </svg>
+        </span>
+      </a>
+      <nav class="flex gap-2 lg:gap-[26px]">
+        <a href="index.html"
+          class="rounded-xl lg:rounded-2xl bg-[#7d8c5c] border-[3px] lg:border-4 border-[#ffa500] px-4 md:px-6 lg:px-[3.1rem] py-0.5 lg:py-[0.35rem] text-sm lg:text-2xl font-semibold text-white">Scores</a>
+        <a href="#"
+          class="rounded-xl lg:rounded-2xl bg-[#7d8c5c] border-[3px] lg:border-4 border-[#ffa500] px-4 md:px-6 lg:px-[2.7rem] py-0.5 lg:py-[0.35rem] text-sm lg:text-2xl font-semibold text-white">Add
+          Score</a>
+      </nav>
+    </div>
+    <div class="flex items-center self-start">
+      <div class="hidden md:flex items-center gap-2 lg:gap-[22px] mr-3 lg:mr-5 self-center">
+        <span class="size-8 lg:size-[46px] rounded-xl lg:rounded-2xl bg-[#7d8c5c] border-[3px] border-[#ffa500]"></span>
+        <span class="size-8 lg:size-[46px] rounded-xl lg:rounded-2xl bg-[#7d8c5c] border-[3px] border-[#ffa500]"></span>
+        <span class="size-8 lg:size-[46px] rounded-xl lg:rounded-2xl bg-[#7d8c5c] border-[3px] border-[#ffa500]"></span>
+        <span class="size-8 lg:size-[46px] rounded-xl lg:rounded-2xl bg-[#7d8c5c] border-[3px] border-[#ffa500]"></span>
+        <span class="size-8 lg:size-[46px] rounded-xl lg:rounded-2xl bg-[#7d8c5c] border-[3px] border-[#ffa500]"></span>
+      </div>
+      <a href="login.html" aria-label="Login"
+        class="size-11 lg:size-[68px] mt-0.5 lg:mt-[3px] rounded-md bg-[#00bfff]"></a>
+    </div>
+  </header>
+
+  <main class="flex-1 flex items-center justify-center px-4 py-8 sm:py-12">
+    <section
+      class="w-full max-w-[800px] bg-[#b0c8e0] border-[3px] border-[#3b78f5] rounded-[28px] px-4 sm:px-[81px] pt-6 sm:pt-[62px] pb-6 sm:pb-10">
+      <!-- Pestanas -->
+      <div class="grid grid-cols-2 gap-4 sm:gap-10">
+        <a href="login.html"
+          class="bg-[#ffdcaa] rounded-[28px] border-[3px] border-[#ffa500] h-20 sm:h-[155px] flex items-center justify-center text-xl sm:text-3xl font-semibold text-gray-700">Login</a>
+        <a href="register.html"
+          class="bg-[#cbbd96] rounded-[28px] border-[3px] border-[#ffa500] h-20 sm:h-[155px] flex items-center justify-center text-xl sm:text-3xl font-semibold text-gray-700">Registro</a>
+      </div>
+
+      <!-- Formulario -->
+      <form action="#" method="post" class="mt-5 sm:mt-[38px] flex flex-col gap-3 sm:gap-[23px]"
+        onsubmit="return false">
+        <label class="block ">
+          <span class="sr-only">Username</span>
+          <input type="text" name="user" placeholder="Username"
+            class="w-full sm:w-[54%] h-9 sm:h-[38px] rounded-lg bg-white px-3 text-base placeholder-gray-400 outline-none focus:ring-2 focus:ring-amber-400">
+        </label>
+        <label class="block ">
+          <span class="sr-only">Password</span>
+          <input type="password" name="password" placeholder="Password"
+            class="w-full sm:w-[41%] h-9 sm:h-[38px] rounded-lg bg-white px-3 text-base placeholder-gray-400 outline-none focus:ring-2 focus:ring-amber-400">
+        </label>
+        <button type="submit"
+          class="mt-5 sm:mt-[41px] w-full h-16 sm:h-[100px] rounded-[40px] bg-[#efefef] text-xl sm:text-3xl font-semibold text-gray-600 hover:bg-white">Iniciar
+          sesión</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-[#004b73] h-20 sm:h-[130px]"></footer>
+</body>
+
+</html>
